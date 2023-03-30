@@ -19,7 +19,7 @@
   <label for="middelName">Middle Name: </label><br>
   <input type="text" name="middleName"><br>
   
-    <label for="lastName">Last Name: </label><br>
+  <label for="lastName">Last Name: </label><br>
   <input type="text" name="lastName"><br>
   
   <label for="address">Address: </label><br>
@@ -39,13 +39,20 @@
   
   <label for="password">Password:</label><br>
   <input type="password" name="password"><br>
-  <br>
+  
+  
   
   
 </form>
         
         <form align="center">
             <input type="submit" value="submit" formaction="welcome.jsp" method="POST">
+            
+            <label for="login">Already have an account :<a href="login.jsp">Click here</a></label>
+        </form>
+        
+        <form align="center">
+           <label for="login">Already have an account: <a href="login.jsp">Click here</a></label>
         </form>
         
     </body>
