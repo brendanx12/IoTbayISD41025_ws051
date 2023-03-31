@@ -47,8 +47,6 @@
         
         <form align="center">
             <input type="submit" value="submit" formaction="welcome.jsp" method="POST">
-            
-            <label for="login">Already have an account :<a href="login.jsp">Click here</a></label>
         </form>
         
         <form align="center">

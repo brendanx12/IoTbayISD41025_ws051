@@ -27,7 +27,7 @@
         </form>
         
         <form align="center">
-            <label for="register">Don't have an account: <a href="login.jsp">Click here</a></label>
+            <label for="register">Don't have an account: <a href="register.jsp">Click here</a></label>
         </form>
         
         
