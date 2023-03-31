@@ -12,6 +12,14 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="home.jsp">Home</a>
+            <a href="login.jsp">Login</a>
+            <a href="register.jsp">Register</a>
+         </nav>
+        
         <form align="center">
             <label for="email">Email</label><br>
             <input type="email" name="email"><br>
