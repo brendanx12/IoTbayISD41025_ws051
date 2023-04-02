@@ -31,7 +31,7 @@
             </nav>
     <div class="title">Login</div>
     <div class="content">
-      <form action="welcome.jsp" method="POST">
+      <form action="welcomeBack.jsp" method="POST">
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
@@ -49,6 +49,11 @@
         <div class="button">
           <input type="submit" value="Login">
         </div>
+          <form align="center">
+            <label for="register">Don't have an account: <a href="register2.jsp">Click here</a></label>
+        </form>
+          <div>
+          </div>
       </form>
     </div>
   </div>

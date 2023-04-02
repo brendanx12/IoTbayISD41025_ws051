@@ -74,6 +74,11 @@
         <div class="button">
           <input type="submit" value="Register">
         </div>
+          </div>
+          <form align="center">
+           <label for="login">Already have an account: <a href="login.jsp">Click here</a></label>
+        </form>
+          <div>
       </form>
     </div>
   </div>
