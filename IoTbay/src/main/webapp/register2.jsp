@@ -7,14 +7,14 @@
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="StyleSheetForNavBar.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/StyleSheetForNavBar.css">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body class="rAlDisplay">
   <div class="container">
             <nav>
                 <ul>
