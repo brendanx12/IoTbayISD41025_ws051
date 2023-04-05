@@ -16,7 +16,6 @@
     </head>
     <body class="rAlDisplay">
         <%
-            String firstName = request.getParameter("firstName");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
         %>
@@ -31,12 +30,8 @@
             </nav>
     <div class="title">Login</div>
     <div class="content">
-      <form action="welcomeBack.jsp" method="POST">
+      <form action="welcome.jsp" method="POST">
         <div class="user-details">
-          <div class="input-box">
-            <span class="details">First Name</span>
-            <input type="text" placeholder="Enter First Name" required name='firstName'>
-          </div>
           <div class="input-box">
             <span class="details">Email</span>
             <input type="text" placeholder="Enter your email" name='email' required>

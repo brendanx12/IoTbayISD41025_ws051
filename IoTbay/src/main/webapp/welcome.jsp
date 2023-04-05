@@ -14,6 +14,7 @@
 <jsp:setProperty name='customer1' property='city'/>
 <jsp:setProperty name='customer1' property='postcode'/>
 <jsp:setProperty name='customer1' property='password'/>
+
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style_1.css">
@@ -31,6 +32,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Index</a></li>
+                    <li><a href="login.jsp">Login</a></li>
                     <li><a href="mainPage.jsp">Home</a></li>
                 </ul>
             </nav>
