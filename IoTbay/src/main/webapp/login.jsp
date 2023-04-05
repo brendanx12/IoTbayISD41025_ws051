@@ -30,7 +30,7 @@
             </nav>
     <div class="title">Login</div>
     <div class="content">
-      <form action="welcome.jsp" method="POST">
+      <form action="validate.jsp" method="POST">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Email</span>

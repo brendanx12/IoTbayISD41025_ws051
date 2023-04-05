@@ -33,7 +33,6 @@
                 <ul>
                     <li><a href="index.html">Index</a></li>
                     <li><a href="login.jsp">Login</a></li>
-                    <li><a href="mainPage.jsp">Home</a></li>
                 </ul>
             </nav>
         </div>
@@ -98,7 +97,7 @@
           </div>
             
         </form>
-            <a href="mainPage.jsp" class="btn btn-primary mt-3">Continue to Main Page</a>
+            <a href="login.jsp" class="btn btn-primary mt-3">Continue to Main Page</a>
              
     </body>
     
