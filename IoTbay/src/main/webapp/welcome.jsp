@@ -97,7 +97,7 @@
           </div>
             
         </form>
-            <a href="login.jsp" class="btn btn-primary mt-3">Continue to Main Page</a>
+            <a href="login.jsp" class="btn btn-primary mt-3">Login</a>
              
     </body>
     

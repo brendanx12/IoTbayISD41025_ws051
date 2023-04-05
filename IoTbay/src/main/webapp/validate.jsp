@@ -23,7 +23,8 @@
 			
 		}else{
 			//IF THE USER IS NOT AUTHORISED THEN AGAIN HE WILL BE REDIRECTED TO THE SAME LOGIN PAGE
-			response.sendRedirect("login.jsp");
+                        session.setAttribute("loginError", "Sorry, wrong credentials. Please try again."); // store error message in session
+                        response.sendRedirect("login.jsp");
 		}
 		%>
     </body>

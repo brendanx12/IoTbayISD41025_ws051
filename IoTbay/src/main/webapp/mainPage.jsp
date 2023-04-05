@@ -20,7 +20,6 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="login.jsp">Login</a></li>
                     <li><a href="logout.jsp">Logout</a></li>
                 </ul>
             </nav>
