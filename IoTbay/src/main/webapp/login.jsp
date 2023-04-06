@@ -8,13 +8,15 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/StyleSheetForNavBar.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>JSP Page</title>
        
     </head>
-    <body class="rAlDisplay">
+    <body>
         <%
             String email = request.getParameter("email");
             String password = request.getParameter("password");
@@ -22,15 +24,16 @@
             String loginError = (String) session.getAttribute("loginError");
             session.removeAttribute("loginError"); // remove the error message from session
         %>
-        
-        <div class="container">
-            <nav>
+        <div>
+        <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="login.jsp">Login</a></li>
                     <li><a href="register2.jsp">Register</a></li>
                 </ul>
-            </nav>
+        </nav>
+        
+        <div class="container">
             <div class="title">Login</div>
             <div class="content">
                 <form action="validate.jsp" method="POST">
@@ -58,6 +61,7 @@
                     </form>
                 </form>
             </div>
+        </div>
         </div>
     </body>
 </html>

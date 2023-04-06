@@ -9,20 +9,22 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/StyleSheetForNavBar.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>JSP Page</title>
     </head>
-    <body class="rAlDisplay">
+    <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.jsp">Login</a></li>
+            <li><a href="register2.jsp">Register</a></li>
+        </ul>
+    </nav>
   <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.jsp">Login</a></li>
-                    <li><a href="register2.jsp">Register</a></li>
-                </ul>
-            </nav>
     <div class="title">Registration</div>
     <div class="content">
       <form action="welcome.jsp" method="POST">
