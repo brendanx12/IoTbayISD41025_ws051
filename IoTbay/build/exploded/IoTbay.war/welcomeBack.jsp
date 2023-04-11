@@ -1,8 +1,9 @@
 <%-- 
-    Document   : welcome
-    Created on : 22 Mar 2023, 2:52:42 pm
-    Author     : Mushini
+    Document   : welcomeBack
+    Created on : 2 Apr 2023, 4:29:42 pm
+    Author     : brend
 --%>
+
 <jsp:useBean id='customer1' scope='session' class='IoTbay.Customer' />
 <jsp:setProperty name='customer1' property='firstName'/>
 <jsp:setProperty name='customer1' property='lastName'/>
@@ -14,7 +15,6 @@
 <jsp:setProperty name='customer1' property='city'/>
 <jsp:setProperty name='customer1' property='postcode'/>
 <jsp:setProperty name='customer1' property='password'/>
-
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style_1.css">
@@ -32,7 +32,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Index</a></li>
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="mainPage.jsp">Home</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,7 +41,7 @@
         <br>
       <h1 class="display-4">Welcome to IotBay!</h1>
       <hr class="my-4">
-      <h3>Successfully registered</h3>
+      <h3>Welcome Back!</h3>
     </div>
 
     <form>
@@ -78,28 +78,9 @@
         </div>
       </div>
     </form>
-
-    <div class="container mt-3">
-      <h3>Edit Info</h3>
-      <form action="welcome.jsp" method="POST">
-        <div class="form-group">
-          <label for="firstName">First Name:</label>
-          <input type="text" class="form-control" name="firstName" required="true">
-        </div>
-        <div class="form-group">
-          <label for="middelName">Middle Name:</label>
-          <input type="text" class="form-control" name="middleName">
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name:</label>
-          <input type="text" class="form-control" name="lastName">     
-        </div>
-          <div class="button">
-              <input type='submit' name='submit'>
-          </div>
             
         </form>
-            <a href="login.jsp" class="btn btn-primary mt-3">Login</a>
+            <a href="mainPage.jsp" class="btn btn-primary mt-3">Continue to Main Page</a>
              
     </body>
     
