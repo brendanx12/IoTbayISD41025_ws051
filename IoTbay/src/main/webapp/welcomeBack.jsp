@@ -37,9 +37,11 @@
             </nav>
         </div>
     <div class="jumbotron mt-3">
+        <br>
+        <br>
       <h1 class="display-4">Welcome to IotBay!</h1>
       <hr class="my-4">
-      <h3>Successfully registered</h3>
+      <h3>Welcome Back!</h3>
     </div>
 
     <form>
@@ -48,8 +50,29 @@
           <%= "First name is: "%> <jsp:getProperty property='firstName' name='customer1'/>
         </div>
         <div class="form-group">
+          <%= "Middle name is: "%> <jsp:getProperty property='middleName' name='customer1'/>
+        </div>
+        <div class="form-group">
+          <%= "Last name is: "%> <jsp:getProperty property='lastName' name='customer1'/>
+        </div>
+        <div class="form-group">
           <%= "Email is: "%> <jsp:getProperty property='email' name='customer1'/>
-        </div>  
+        </div>
+        <div class="form-group">
+          <%= "Phone Number is: "%> <jsp:getProperty property='mobileNumber' name='customer1'/>
+        </div>
+        <div class="form-group">
+          <%= "Address is: "%> <jsp:getProperty property='address' name='customer1'/>
+        </div>
+        <div class="form-group">
+          <%= "State is: "%> <jsp:getProperty property='state' name='customer1'/>
+        </div>
+        <div class="form-group">
+          <%= "City is: "%> <jsp:getProperty property='city' name='customer1'/>
+        </div>
+        <div class="form-group">
+          <%= "Postcode is: "%> <jsp:getProperty property='postcode' name='customer1'/>
+        </div>
         <div class="form-group">
           <%= "Password is: "%> <jsp:getProperty property='password' name='customer1'/>
         </div>

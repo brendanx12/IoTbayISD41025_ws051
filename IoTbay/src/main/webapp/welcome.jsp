@@ -33,11 +33,12 @@
                 <ul>
                     <li><a href="index.html">Index</a></li>
                     <li><a href="login.jsp">Login</a></li>
-                    <li><a href="mainPage.jsp">Home</a></li>
                 </ul>
             </nav>
         </div>
     <div class="jumbotron mt-3">
+        <br>
+        <br>
       <h1 class="display-4">Welcome to IotBay!</h1>
       <hr class="my-4">
       <h3>Successfully registered</h3>
@@ -91,14 +92,14 @@
         </div>
         <div class="form-group">
           <label for="lastName">Last Name:</label>
-          <input type="text" class="form-control">     
+          <input type="text" class="form-control" name="lastName">     
         </div>
           <div class="button">
               <input type='submit' name='submit'>
           </div>
             
         </form>
-            <a href="mainPage.jsp" class="btn btn-primary mt-3">Continue to Main Page</a>
+            <a href="login.jsp" class="btn btn-primary mt-3">Login</a>
              
     </body>
     

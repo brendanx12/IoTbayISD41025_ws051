@@ -20,12 +20,13 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="login.jsp">Login</a></li>
                     <li><a href="logout.jsp">Logout</a></li>
                 </ul>
             </nav>
         </div>
         <div class="container mt-3">
+            <br>
+        <br>
             <h1>Main Page</h1>
             <p class="lead">Logged in as: ${customer1.firstName}</p>
             <a href="logout.jsp" class="btn btn-danger">Click here to Log out</a>
