@@ -22,7 +22,7 @@ public DBManager(Connection conn) throws SQLException {
 
 //Find user by email and password in the database   
 public student findStudent(String email) throws SQLException {  
-    String query = "SELECT EMAIL FROM ROOT.STUDENTS WHERE EMAIL= '" + email + "'";
+    String query = "SELECT * FROM ROOT.STUDENTS WHERE EMAIL= '" + email + "'";
     ResultSet rs = st.executeQuery(query);
     
     while(rs.next()){
