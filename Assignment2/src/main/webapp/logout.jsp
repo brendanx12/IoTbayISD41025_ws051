@@ -26,6 +26,7 @@
         
         <div class="container mt-5">
         <h1>You've successfully been logged out!</h1>
+        <!--This just invalidates the session-->
         <% session.invalidate();%>
         <a href='index.html' class="btn btn-primary mt-3" style="background-color: #333;">Home Page</a>
         </div>  
