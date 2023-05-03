@@ -11,22 +11,21 @@ import java.io.Serializable;
  * @author brend
  */
 public class Customer implements Serializable{
-    private int id;
     private String firstName;
     private String middleName;
     private String lastName;
     private String email;
     private int mobileNumber;
-    private String address;
-    private String state;
-    private String city;
-    private int postcode;
     private String password;
+    private String address;
+    private String city;
+    private String state;
+    private int postcode;
     private boolean active;
 
-    public Customer(int id, String firstName, String middleName, String lastName, String email, int mobileNumber,
-            String address, String state, String city, int postcode, String password, boolean active) {
-        this.id = id;
+    public Customer(String firstName, String middleName, String lastName, String email, int mobileNumber,
+            String address, String state, String city, int postcode, String password) {
+ 
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -37,15 +36,6 @@ public class Customer implements Serializable{
         this.city = city;
         this.postcode = postcode;
         this.password = password;
-    }
-
-
-    public String getId(){
-        return Integer.toString(id);
-    }
-    
-    public void setId(int id){
-        this.id = id;
     }
 
     public String getFirstName() {

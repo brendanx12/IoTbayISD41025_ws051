@@ -22,4 +22,39 @@
       <description>Keep a copy of the generated servlet class' java code.</description>
     </property>
   </jsp-config>
+  
+  <servlet>  
+    <servlet-name>LoginIotBay</servlet-name>  
+    <servlet-class>LoginIotBay</servlet-class>  
+  </servlet>  
+  <servlet>  
+    <servlet-name>WelcomeServletIotBay</servlet-name>  
+    <servlet-class>/WelcomeServletIotBay</servlet-class>  
+  </servlet> 
+  <servlet>  
+    <servlet-name>RegisterIotBay</servlet-name>  
+    <servlet-class>/RegisterIotBay</servlet-class>  
+  </servlet> 
+  <servlet>  
+    <servlet-name>ConnServletIotBay</servlet-name>  
+    <servlet-class>controller.ConnServletIotBay</servlet-class>  
+  </servlet> 
+  
+  <servlet-mapping>  
+    <servlet-name>LoginIotBay</servlet-name>  
+    <url-pattern>/LoginIotBay</url-pattern>  
+  </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>WelcomeServletIotBay</servlet-name>  
+    <url-pattern>/WelcomeServletIotBay</url-pattern>  
+  </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>ConnServletIotBay</servlet-name>  
+    <url-pattern>/ConnServletIotBay</url-pattern>  
+  </servlet-mapping> 
+   <servlet-mapping>  
+    <servlet-name>RegisterIotBay</servlet-name>  
+    <url-pattern>/RegisterIotBay</url-pattern>  
+  </servlet-mapping>  
+
 </glassfish-web-app>

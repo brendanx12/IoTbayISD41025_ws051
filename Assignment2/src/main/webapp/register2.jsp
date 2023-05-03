@@ -29,7 +29,7 @@
         <br>
     <div class="title">Registration</div>
     <div class="content">
-      <form action="welcome.jsp" method="POST">
+      <form action="RegisterIotBay" method="post">
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>

@@ -1,5 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : 29 Apr 2023, 4:13:48 pm
+    Author     : Mushini
+--%>
 
-
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,6 +28,8 @@
         <br>
         <br>
         <h1 align="center">IoT Bay Home Page</h1>
+        <!--included-->
+        <jsp:include page="/ConnServletIotBay" flush="true"/>
     </body>
-   
+    
 </html>

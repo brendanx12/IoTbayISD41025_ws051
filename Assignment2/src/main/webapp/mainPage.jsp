@@ -3,8 +3,11 @@
     Created on : 1 Apr 2023, 3:59:32 pm
     Author     : Mushini
 --%>
-<jsp:useBean id='employee' scope='session' class='IoTbay.EmployeesBean' />
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
+<%@page import="workshop.*"%>
+<%@page import="IoTbay.*"%>
+<%@page import="controller.*"%>
+<%@ page language="java" import="java.util.*" %>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style_1.css">
 <link rel="stylesheet" href="css/style.css">
@@ -17,6 +20,9 @@
     </head>
     <body>
         <div>
+            <%
+            Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
+        %>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,7 +34,7 @@
             <br>
         <br>
             <h1>Main Page</h1>
-            <p class="lead">Logged in as: ${customer1.firstName}</p>
+            <p class="lead"><%= "Logged in as: " + loggedInCustomer.getFirstName()%></p>
             <a href="logout.jsp" class="btn btn-danger">Click here to Log out</a>
         </div>
     </body>

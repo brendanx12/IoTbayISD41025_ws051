@@ -9,6 +9,8 @@ import java.sql.*;
 import workshop.dao.*;
 import workshop.*;
 import java.util.*;
+import IoTbay.*;
+
 
 import java.util.logging.*;
 
@@ -35,8 +37,10 @@ try {
 
     String email = in.nextLine();
     //then we're gonna run the search with email function
-    student newStudent = db.findStudent(email);
-    System.out.print("This email belongs to " + newStudent.getName());
+   // Customer newCustomer = db.findCustomer(email);
+    //System.out.print("This email belongs to " + newCustomer.getFirstName());
+    //System.out.print("Password is  " + newCustomer.getPassword());
+    //System.out.print("He lives in the state  " + newCustomer.getState());
 
     connector.closeConnection();
 
