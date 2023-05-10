@@ -38,8 +38,49 @@
   <servlet>  
     <servlet-name>ConnServletIotBay</servlet-name>  
     <servlet-class>controller.ConnServletIotBay</servlet-class>  
-  </servlet> 
-  
+  </servlet>
+  <servlet>  
+    <servlet-name>LogOutController</servlet-name>  
+    <servlet-class>LogOutController</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>showAccountDetails</servlet-name>  
+    <servlet-class>showAccountDetails</servlet-class>  
+  </servlet>
+   <servlet>  
+    <servlet-name>customerUpdate</servlet-name>  
+    <servlet-class>customerUpdate</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>deleteAccount</servlet-name>  
+    <servlet-class>deleteAccount</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>viewAccessLogs</servlet-name>  
+    <servlet-class>viewAccessLogs</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>StaffDeleteAccount</servlet-name>  
+    <servlet-class>StaffDeleteAccount</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>StaffLogOutController</servlet-name>  
+    <servlet-class>StaffLogOutController</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>StaffLoginIotBay</servlet-name>  
+    <servlet-class>StaffLoginIotBay</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>StaffRegisterIotBay</servlet-name>  
+    <servlet-class>StaffRegisterIotBay</servlet-class>  
+  </servlet>
+  <servlet>  
+    <servlet-name>staffUpdate</servlet-name>  
+    <servlet-class>staffUpdate</servlet-class>  
+  </servlet>
+    
+ 
   <servlet-mapping>  
     <servlet-name>LoginIotBay</servlet-name>  
     <url-pattern>/LoginIotBay</url-pattern>  
@@ -55,6 +96,51 @@
    <servlet-mapping>  
     <servlet-name>RegisterIotBay</servlet-name>  
     <url-pattern>/RegisterIotBay</url-pattern>  
+  </servlet-mapping>
+  <servlet-mapping>  
+    <servlet-name>LogOutController</servlet-name>  
+    <url-pattern>/LogOutController</url-pattern>  
   </servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>showAccountDetails</servlet-name>  
+    <url-pattern>/showAccountDetails</url-pattern>  
+  </servlet-mapping>  
+   <servlet-mapping>  
+    <servlet-name>customerUpdate</servlet-name>  
+    <url-pattern>/customerUpdate</url-pattern>  
+  </servlet-mapping>
+   <servlet-mapping>  
+    <servlet-name>deleteAccount</servlet-name>  
+    <url-pattern>/deleteAccount</url-pattern>  
+  </servlet-mapping>
+   <servlet-mapping>  
+    <servlet-name>viewAccessLogs</servlet-name>  
+    <url-pattern>/viewAccessLogs</url-pattern>  
+  </servlet-mapping>
+  
+  <servlet-mapping>  
+    <servlet-name>StaffDeleteAccount</servlet-name>  
+    <url-pattern>/StaffDeleteAccount</url-pattern>  
+  </servlet-mapping>
+  <servlet-mapping>  
+    <servlet-name>StaffLogOutController</servlet-name>  
+    <url-pattern>/StaffLogOutController</url-pattern>  
+  </servlet-mapping>
+ <servlet-mapping>  
+    <servlet-name>StaffLoginIotBay</servlet-name>  
+    <url-pattern>/StaffLoginIotBay</url-pattern>  
+  </servlet-mapping>
+  <servlet-mapping>  
+    <servlet-name>StaffRegisterIotBay</servlet-name>  
+    <url-pattern>/StaffRegisterIotBay</url-pattern>  
+  </servlet-mapping>
+  <servlet-mapping>  
+    <servlet-name>staffUpdate</servlet-name>  
+    <url-pattern>/staffUpdate</url-pattern>  
+  </servlet-mapping>
+  
+  
+    
+  
 
 </glassfish-web-app>

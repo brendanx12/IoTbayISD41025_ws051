@@ -26,8 +26,10 @@
         <div>        
             <nav>
                 <ul>
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="mainPage.jsp">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
+            <li><a href="login.jsp">Customer Login</a></li>
+            <li><a href="register2.jsp">Customer Sign Up</a></li>
+            <li><a href="staff-login.jsp">Staff Login</a></li>
                 </ul>
             </nav>
         </div>

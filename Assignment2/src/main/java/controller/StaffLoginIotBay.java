@@ -24,8 +24,8 @@ import IoTbay.*;
  *
  * @author Mushini
  */
-@WebServlet(name = "LoginIotBay", urlPatterns = {"/LoginIotBay"})
-public class LoginIotBay extends HttpServlet {
+@WebServlet(name = "StaffLoginIotBay", urlPatterns = {"/StaffLoginIotBay"})
+public class StaffLoginIotBay extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)  
         throws ServletException, IOException {  
@@ -45,18 +45,18 @@ public class LoginIotBay extends HttpServlet {
     
     try {
     //then we're gonna run the search with email function
-    newCustomer = manager.findCustomer(email,inputtedPassword);
+    newCustomer = manager.findStaff(email,inputtedPassword);
     if(newCustomer != null){
         session.setAttribute("Customer",newCustomer);
         //get the email of the logged in customer and send it so an access log can be created
         manager.createTimeStamp(newCustomer.getEmail());
-        request.getRequestDispatcher("welcomeBack.jsp").include(request,response);
+        request.getRequestDispatcher("staffMainPage.jsp").include(request,response);
         //out.println(newCustomer.getFirstName());
         
     }else{
         //else we're gonna send u back to the login page
         session.setAttribute("passIsCorrect","false");
-        request.getRequestDispatcher("login.jsp").include(request,response);
+        request.getRequestDispatcher("staff-login.jsp").include(request,response);
     }
 } catch (SQLException | NullPointerException ex) {
     System.out.println("Vague Exception Occured!");

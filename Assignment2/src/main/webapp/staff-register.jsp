@@ -14,22 +14,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>JSP Page</title>
+        <title>Staff Registration</title>
     </head>
     <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.jsp">Login</a></li>
-            <li><a href="register2.jsp">Register</a></li>
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="login.jsp">Customer Login</a></li>
+            <li><a href="register2.jsp">Customer Sign Up</a></li>
+            <li><a href="staff-login.jsp">Staff Login</a></li>
+            
         </ul>
     </nav>
   <div class="container">
       <br>
         <br>
-    <div class="title">Registration</div>
+    <div class="title">Staff Registration</div>
     <div class="content">
-      <form action="welcome.jsp" method="POST">
+      <form action="StaffRegisterIotBay" method="post">
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>

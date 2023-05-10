@@ -36,11 +36,12 @@ try {
     System.out.print("User email: ");
 
     String email = in.nextLine();
+    db.createTimeStampLogout(email);
     //then we're gonna run the search with email function
    // Customer newCustomer = db.findCustomer(email);
     //System.out.print("This email belongs to " + newCustomer.getFirstName());
     //System.out.print("Password is  " + newCustomer.getPassword());
-    //System.out.print("He lives in the state  " + newCustomer.getState());
+    System.out.print("He lives in the state  ");
 
     connector.closeConnection();
 

@@ -13,23 +13,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>JSP Page</title>
+        <title>Staff Login</title>
        
     </head>
     <body>
-        <%
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            // check if there is a login error message in the session
-            String loginError = (String) session.getAttribute("loginError");
-            session.removeAttribute("loginError"); // remove the error message from session
-        %>
         <div>
         <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.jsp">Login</a></li>
-                    <li><a href="register2.jsp">Register</a></li>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="login.jsp">Customer Login</a></li>
+                <li><a href="register2.jsp">Customer Sign Up</a></li>
+                    
+                    <li><a href="staff-register.jsp">Staff Register</a></li>
                 </ul>
         </nav>
         </div>
@@ -41,7 +36,7 @@
         <br>
             <div class="title">Login</div>
             <div class="content">
-                <form action="validate.jsp" method="POST">
+                <form action="StaffLoginIotBay" method="post">
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details">Email</span>
@@ -49,15 +44,15 @@
                         </div>
                         <div class="input-box">
                             <span class="details">Password</span>
-                            <input type="text" placeholder="Enter your password" name='password' required>
+                            <input type="password" placeholder="Enter your password" name='password' required>
                         </div>
+                        <% 
+         String passIsCorrect = (String) session.getAttribute("passIsCorrect");
+         if(passIsCorrect != null){
+                            out.print("Incorrect login details");
+                            }
+          %>
                     </div>
-                    <% if (loginError != null) {
-                    // if there is an error message, display it
-                    %>
-                    <div class="error"><%= loginError %></div>
-                    <%
-                     } %>
                     <div class="button">
                         <input type="submit" value="Login">
                     </div>

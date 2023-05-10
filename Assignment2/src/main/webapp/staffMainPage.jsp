@@ -16,7 +16,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>JSP Page</title>
+        <title>Staff Main Page</title>
     </head>
     <body>
         <div>
@@ -27,7 +27,7 @@
                 <ul>
                     <li><a href="mainPage.jsp">Home</a></li>
                     <li><a href="LogOutController">Logout</a></li>
-                    <li><a href="customerDetails.jsp">Account Settings</a></li>
+                    <li><a href="staffDetails.jsp">Account Settings</a></li>
                 </ul>
             </nav>
         </div>

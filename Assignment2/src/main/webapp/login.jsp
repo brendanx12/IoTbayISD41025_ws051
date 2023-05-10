@@ -13,16 +13,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>JSP Page</title>
+        <title>Customer Login</title>
        
     </head>
     <body>
         <div>
         <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.jsp">Login</a></li>
-                    <li><a href="register2.jsp">Register</a></li>
+                    <li><a href="index.jsp">Home</a></li>
+                  
+                    <li><a href="register2.jsp">Customer Register</a></li>
+                    <li><a href="staff-login.jsp">Staff Login</a></li>
+                    <li><a href="staff-register.jsp">Staff Sign Up</a></li>
                 </ul>
         </nav>
         </div>

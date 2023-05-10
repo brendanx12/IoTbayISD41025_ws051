@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>index</title>
+        <title>IotBay</title>
 <!--        <meta charset="windows-1252">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -20,9 +20,11 @@
     <body>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.jsp">Login</a></li>
-                <li><a href="register2.jsp">Register</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="login.jsp">Customer Login</a></li>
+                <li><a href="register2.jsp">Customer Sign Up</a></li>
+                <li><a href="staff-login.jsp">Staff Login</a></li>
+                <li><a href="staff-register.jsp">Staff Sign Up</a></li>
             </ul>
         </nav>
         <br>

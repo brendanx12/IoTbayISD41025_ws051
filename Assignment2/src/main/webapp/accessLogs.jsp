@@ -1,13 +1,10 @@
 <%-- 
-    Document   : third
-    Created on : 1 Apr 2023, 3:59:32 pm
+    Document   : accessLogs
+    Created on : 3 May 2023, 7:08:25 pm
     Author     : Mushini
 --%>
+
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
-<%@page import="workshop.*"%>
-<%@page import="IoTbay.*"%>
-<%@page import="controller.*"%>
-<%@ page language="java" import="java.util.*" %>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style_1.css">
 <link rel="stylesheet" href="css/style.css">
@@ -25,9 +22,8 @@
         %>
             <nav>
                 <ul>
-                    <li><a href="mainPage.jsp">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="LogOutController">Logout</a></li>
-                    <li><a href="customerDetails.jsp">Account Settings</a></li>
                 </ul>
             </nav>
         </div>
