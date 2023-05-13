@@ -25,6 +25,7 @@ public static void main(String[] args) {
  
 
 try {
+    
     //connector for database connection
     DBConnector connector = new DBConnector();
     Connection conn = connector.openConnection();

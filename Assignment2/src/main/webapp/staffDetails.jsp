@@ -24,7 +24,7 @@
             
             <nav>
                 <ul>
-                    <li><a href="StaffMainPage.jsp">Home</a></li>
+                    <li><a href="staffMainPage.jsp">Home</a></li>
                     <li><a href="LogOutController">Logout</a></li>
                 </ul>
             </nav>
@@ -90,7 +90,7 @@ if it isn't null then we're going to edit the data
         </div>  
                         <br>
                         <div class="button">
-                             <a href="accessLogsJsp.jsp" class="btn btn-primary">view access logs</a>
+                             <a href="staffAccessLogs.jsp" class="btn btn-primary">view access logs</a>
                         </div>
                         <br>
                         <div class="button">

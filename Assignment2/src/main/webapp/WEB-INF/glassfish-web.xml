@@ -79,6 +79,10 @@
     <servlet-name>staffUpdate</servlet-name>  
     <servlet-class>staffUpdate</servlet-class>  
   </servlet>
+  <servlet>  
+    <servlet-name>addpeople</servlet-name>  
+    <servlet-class>addpeople</servlet-class>  
+  </servlet>
     
  
   <servlet-mapping>  
@@ -137,6 +141,10 @@
   <servlet-mapping>  
     <servlet-name>staffUpdate</servlet-name>  
     <url-pattern>/staffUpdate</url-pattern>  
+  </servlet-mapping>
+  <servlet-mapping>  
+    <servlet-name>addpeople</servlet-name>  
+    <url-pattern>/addpeople</url-pattern>  
   </servlet-mapping>
   
   
