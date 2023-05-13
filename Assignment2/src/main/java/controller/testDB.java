@@ -30,19 +30,22 @@ try {
     Connection conn = connector.openConnection();
     //manager for the sql operations
     DBManager db = new DBManager(conn);
+    DBProduct db2 = new DBProduct(conn);
 
- 
+    //System.out.print("User email: ");
 
-    System.out.print("User email: ");
-
-    String email = in.nextLine();
-    db.createTimeStampLogout(email);
+    //String email = in.nextLine();
+    //db.createTimeStampLogout(email);
     //then we're gonna run the search with email function
    // Customer newCustomer = db.findCustomer(email);
     //System.out.print("This email belongs to " + newCustomer.getFirstName());
     //System.out.print("Password is  " + newCustomer.getPassword());
-    System.out.print("He lives in the state  ");
-
+    //System.out.print("He lives in the state  ");
+    //db2.removeProductById(3);
+    db2.updateProduct(855, "name", "Des", "type", 43, 5, "Image");
+    //db2.removeProductByName("Nadnerb");
+    //db2.getProductById("Nadnerb");
+    //System.out.println(db2.getProductById("Nadnerb"));
     connector.closeConnection();
 
  
