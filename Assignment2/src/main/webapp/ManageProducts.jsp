@@ -1,28 +1,22 @@
 <%-- 
-    Document   : third
-    Created on : 1 Apr 2023, 3:59:32 pm
-    Author     : Mushini
+    Document   : ManageProducts
+    Created on : 5 May 2023, 8:58:18 pm
+    Author     : brend
 --%>
+
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
-<%@page import="workshop.*"%>
-<%@page import="IoTbay.*"%>
-<%@page import="controller.*"%>
-<%@ page language="java" import="java.util.*" %>
+<%@page import="IoTbay.Product"%>
 <!DOCTYPE html>
-<link rel="stylesheet" href="style_1.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/StyleSheetForNavBar.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>Staff Main Page</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <div>
-            <%
-            Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
-        %>
             <nav>
                 <ul>
                     <li><a href="staffMainPage.jsp">Home</a></li>
@@ -32,12 +26,19 @@
                 </ul>
             </nav>
         </div>
-        <div class="container mt-3">
+            <br>
+        <div class="container">
             <br>
         <br>
-            <h1>Main Page</h1>
-            <p class="lead"><%= "Logged in as: " + loggedInCustomer.getFirstName()%></p>
-            <a href="LogOutController" class="btn btn-danger">Click here to Log out</a>
+        <br>
+        <br>
+        <h1>Manage IoTbay Inventory</h1>
+        
+        <a href="ProductForm.jsp" method="post"> Add Product Item to Inventory<br></a>
+        
+        <a href="ShowInventoryController" method="post">Show Product Inventory<br></a>
+        
+        <a href="ProductSearchPage.jsp" method="post">Search Products<br></a>
         </div>
     </body>
 </html>
