@@ -26,10 +26,9 @@
         <div>        
             <nav>
                 <ul>
-                    <li><a href="index.jsp">Home</a></li>
-            <li><a href="login.jsp">Customer Login</a></li>
-            <li><a href="register2.jsp">Customer Sign Up</a></li>
-            <li><a href="staff-login.jsp">Staff Login</a></li>
+                    <li><a href="mainPage.jsp">Home</a></li>
+                    <li><a href="LogOutController">Logout</a></li>
+                    <li><a href="customerDetails.jsp">Account Settings</a></li>
                 </ul>
             </nav>
         </div>

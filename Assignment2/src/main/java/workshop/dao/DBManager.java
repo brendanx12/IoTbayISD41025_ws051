@@ -219,5 +219,56 @@ public void updateStaff( String firstName,String middleName,String lastName, Str
                     
 
 }   
+
+public void addPerson(String firstName, String lastName) throws SQLException{       
+   //code for delete-operation 
+   String DeleteQuery = "INSERT INTO PEOPLE (FIRSTNAME, LASTNAME) VALUES ('" + firstName + "', '" + lastName + "')";
+   st.executeUpdate(DeleteQuery);
+}
+
+public void createCustomer(String firstName,String middleName,String lastName,String email,
+        int mobileNumber, String address,String state, String city,int postcode, String password)
+        throws SQLException{ 
+    //code for add-operation       
+    String query = "INSERT INTO IOTBAY.CUSTOMER (USERFIRSTNAME, USERMIDDLENAME, USERLASTNAME,USERMOBILENUMBER,USEREMAIL,USERPASSWORD," +
+"USERADDRESS,USERCITY,USERSTATE,USERPOSTCODE ) VALUES ('" + firstName + "'," + "'" + middleName + "'," + "'" + lastName + "'," + mobileNumber + "," + "'" + email + "'," + "'" + password + "'," + "'" + address + "'," + "'" + city + "',"
+            + "'" + state + "'," + postcode +")";
+
+    st.executeUpdate(query); 
+    System.out.println("Success");
+ 
+
+}
+
+public void customerUpdate( String firstName,String middleName,String lastName, String email,
+        int mobileNumber, String address,String state, String city,int postcode, String password)
+        throws SQLException {       
+            String query = "UPDATE CUSTOMER SET USERFIRSTNAME = '" + firstName + "'," + 
+                    "SET USERMIDDLENAME = '" + middleName + "'," + "SET USERLASTNAME = '" + lastName + 
+                    "'," + "SET USER MOBILENUMBER = " + mobileNumber + ",SET USERPASSWORD = '" + 
+                    password + "'," + "SET USERADDRESS = '" + address + "'," + "SET USERCITY = '" + city + "',"
+                    + "SET USERSTATE = '" + state+ "'," + "SET USERPOSTCODE = " + postcode + "WHERE USEREMAIL = '" + email +"'";
+              
+                    String query2 = "UPDATE CUSTOMER SET USERFIRSTNAME = '" + firstName + "' WHERE USEREMAIL = '" + email + "'";    
+                    String query3 = "UPDATE CUSTOMER SET USERMIDDLENAME = '" + middleName + "' WHERE USEREMAIL = '" + email + "'";  
+                    String query4 = "UPDATE CUSTOMER SET USERLASTNAME = '" + lastName + "' WHERE USEREMAIL = '" + email + "'";  
+                    String query5 = "UPDATE CUSTOMER SET USERMOBILENUMBER = " + mobileNumber + " WHERE USEREMAIL = '" + email + "'"; 
+                    String query6 = "UPDATE CUSTOMER SET USERPASSWORD = '" + password + "' WHERE USEREMAIL = '" + email + "'"; 
+                    String query7 = "UPDATE CUSTOMER SET USERSTATE = '" + state + "' WHERE USEREMAIL = '" + email + "'"; 
+                    String query8 = "UPDATE CUSTOMER SET USERCITY = '" + city + "' WHERE USEREMAIL = '" + email + "'";
+                    String query9 = "UPDATE CUSTOMER SET USERPOSTCODE= " + postcode + " WHERE USEREMAIL = '" + email + "'"; 
+                    String query10= "UPDATE CUSTOMER SET USERADDRESS= '" + address + "' WHERE USEREMAIL = '" + email + "'"; 
+                    st.executeUpdate(query2);
+                    st.executeUpdate(query3);
+                    st.executeUpdate(query4);
+                    st.executeUpdate(query5);
+                    st.executeUpdate(query6);
+                    st.executeUpdate(query7);
+                    st.executeUpdate(query8);
+                    st.executeUpdate(query9);
+                    st.executeUpdate(query10);
+                    
+
+}       
 }
 
