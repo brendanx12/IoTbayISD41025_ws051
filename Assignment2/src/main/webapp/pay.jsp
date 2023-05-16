@@ -25,25 +25,26 @@ Author : benja
     <title>Payment Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/StyleSheetForNavBar.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <%
-    Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
-    int userID = loggedInCustomer.getUserId();
+        Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
+        String email = loggedInCustomer.getEmail();
+        ResultSet newrs = manager.st.executeQuery("SELECT * FROM IOTBAY.CUSTOMER WHERE USEREMAIL = '" + email + "'");
+        int userID = 0; // Declare the variable outside the if block
+
+        if (newrs.next()) {
+            userID = newrs.getInt(1); // Assign a value within the if block
+        }
     %>
 
     <nav>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <%-- Only show login/register links if the user is not logged in --%>
-            <% if (loggedInCustomer == null) { %>
-                <li><a href="login.jsp">Login</a></li>
-                <li><a href="register2.jsp">Register</a></li>
-            <% } else { %>
-                <li><a href="logout.jsp">Logout</a></li>
-            <% } %>
+            <li><a href="mainPage.jsp">Home</a></li>
+            <li><a href="LogOutController">Logout</a></li>
         </ul>
     </nav>
     <br>
@@ -65,45 +66,8 @@ Author : benja
                             paymentDetails.setExpiryDate(rs.getString("EXPIRYDATE"));
                             paymentDetailsList.add(paymentDetails);
                         }
-                        if (paymentDetailsList != null){
-                            for (PaymentDetails paymentDetails : paymentDetailsList) {
-                            out.println(paymentDetails.getFirstName() + " - " + paymentDetails.getCardNumber());
-                                            }
-                        }
                         %>
-                <h3>Select a Payment Method:</h3>
-                <form action="GettingPayment" method="post">
-                    <div class="form-group">
-                        <label for="payment_method">Payment Method:</label>
-                        <select name="selectedCard">
-                        <% for (PaymentDetails paymentDetails : paymentDetailsList) { %>
-                          <option value="<%= paymentDetails.getPaymentDetailsId() %>">
-                            <%= paymentDetails.getFirstName() %> - <%= paymentDetails.getCardNumber() %>
-                          </option>
-                        <% } %>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Submit Payment">
-                    </div>
-                </form>
-                       
-                <form action="GettingPayment" method="post">
-                <div class="form-group">
-                  <label for="payment_method">Payment Method:</label>
-                  <select name="selectedCard" id="selectedCard">
-                    <% for (PaymentDetails paymentDetails : paymentDetailsList) { %>
-                    <option value="<%= paymentDetails.getPaymentDetailsId() %>">
-                      <%= paymentDetails.getFirstName() %> - <%= paymentDetails.getCardNumber() %>
-                    </option>
-                    <% } %>
-                  </select>
-                  <input type="hidden" name="paymentDetailsId" id="paymentDetailsId" value="">
-                </div>
-                <div class="form-group">
-                  <input type="submit" class="btn btn-primary" value="Submit Payment">
-                </div>
-              </form>
+               
 
               <script>
                 // get the dropdown element
