@@ -66,45 +66,8 @@ Author : benja
                             paymentDetails.setExpiryDate(rs.getString("EXPIRYDATE"));
                             paymentDetailsList.add(paymentDetails);
                         }
-                        if (paymentDetailsList != null){
-                            for (PaymentDetails paymentDetails : paymentDetailsList) {
-                            out.println(paymentDetails.getFirstName() + " - " + paymentDetails.getCardNumber());
-                                            }
-                        }
                         %>
-                <h3>Select a Payment Method:</h3>
-                <form action="GettingPayment" method="post">
-                    <div class="form-group">
-                        <label for="payment_method">Payment Method:</label>
-                        <select name="selectedCard">
-                        <% for (PaymentDetails paymentDetails : paymentDetailsList) { %>
-                          <option value="<%= paymentDetails.getPaymentDetailsId() %>">
-                            <%= paymentDetails.getFirstName() %> - <%= paymentDetails.getCardNumber() %>
-                          </option>
-                        <% } %>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Submit Payment">
-                    </div>
-                </form>
-                       
-                <form action="GettingPayment" method="post">
-                <div class="form-group">
-                  <label for="payment_method">Payment Method:</label>
-                  <select name="selectedCard" id="selectedCard">
-                    <% for (PaymentDetails paymentDetails : paymentDetailsList) { %>
-                    <option value="<%= paymentDetails.getPaymentDetailsId() %>">
-                      <%= paymentDetails.getFirstName() %> - <%= paymentDetails.getCardNumber() %>
-                    </option>
-                    <% } %>
-                  </select>
-                  <input type="hidden" name="paymentDetailsId" id="paymentDetailsId" value="">
-                </div>
-                <div class="form-group">
-                  <input type="submit" class="btn btn-primary" value="Submit Payment">
-                </div>
-              </form>
+               
 
               <script>
                 // get the dropdown element
