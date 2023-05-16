@@ -30,8 +30,19 @@ Author : benja
 </head>
 <body>
     <%
+    int userID;
     Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
-    int userID = loggedInCustomer.getUserId();
+    String email = loggedInCustomer.getEmail();
+    ResultSet rs = manager.st.executeQuery("SELECT USERSID FROM IOTBAY.CUSTOMER WHERE USEREMAIL= '" + email + "'");
+    while(rs.next()){
+        if (customerEmail.equals(email)){
+                userID = rs.getInt(1);
+                }else{
+                    System.err.println("Incorrect Password");
+                    return null;
+                }
+        }   
+    }    
     %>
 
     <nav>
