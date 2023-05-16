@@ -11,7 +11,6 @@ import java.io.Serializable;
  * @author brend
  */
 public class Customer implements Serializable{
-    private int userId;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -24,10 +23,9 @@ public class Customer implements Serializable{
     private int postcode;
     private boolean active;
 
-    public Customer(int userId, String firstName, String middleName, String lastName, String email, int mobileNumber,
+    public Customer(String firstName, String middleName, String lastName, String email, int mobileNumber,
             String address, String state, String city, int postcode, String password) {
-        
-        this.userId = userId;
+ 
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -39,11 +37,7 @@ public class Customer implements Serializable{
         this.postcode = postcode;
         this.password = password;
     }
-    
-    public int getUserId() {
-        return userId;
-    }
-    
+
     public String getFirstName() {
         return firstName;
     }

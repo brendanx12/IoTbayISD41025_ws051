@@ -30,19 +30,14 @@ Author : benja
 </head>
 <body>
     <%
-    int userID;
-    Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
-    String email = loggedInCustomer.getEmail();
-    ResultSet rs = manager.st.executeQuery("SELECT USERSID FROM IOTBAY.CUSTOMER WHERE USEREMAIL= '" + email + "'");
-    while(rs.next()){
-        if (customerEmail.equals(email)){
-                userID = rs.getInt(1);
-                }else{
-                    System.err.println("Incorrect Password");
-                    return null;
-                }
-        }   
-    }    
+        Customer loggedInCustomer = (Customer) session.getAttribute("Customer");
+        String email = loggedInCustomer.getEmail();
+        ResultSet newrs = manager.st.executeQuery("SELECT * FROM IOTBAY.CUSTOMER WHERE USEREMAIL = '" + email + "'");
+        int userID = 0; // Declare the variable outside the if block
+
+        if (newrs.next()) {
+            userID = newrs.getInt(1); // Assign a value within the if block
+        }
     %>
 
     <nav>
