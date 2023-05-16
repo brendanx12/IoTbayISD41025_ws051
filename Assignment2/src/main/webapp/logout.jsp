@@ -19,6 +19,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="GuestCustomerSearch.jsp">Search</a></li>
                 <li><a href="login.jsp">Login</a></li>
                 <li><a href="register2.jsp">Register</a></li>
             </ul>

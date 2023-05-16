@@ -60,7 +60,8 @@ public class UpdateProducts extends HttpServlet {
         
         Product product = (Product) session.getAttribute("Product");
         //Retrieve the inputted values from the user
-        String previousName = request.getParameter("previousName");
+        //String previousName = request.getParameter("previousName");
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String description = request.getParameter("description"); 
         String type = request.getParameter("type");
@@ -68,32 +69,12 @@ public class UpdateProducts extends HttpServlet {
         int stock = Integer.parseInt(request.getParameter("stock"));
         String image = request.getParameter("image");
         
-        //database
-        //session.setAttribute("product", null);
-        //session.setAttribute("updated", null);
-        
-         try{
-                boolean check = manager.checkProduct(previousName);
-                if(check){
-                    
-                    product = manager.getProduct(previousName);
-                    int id = manager.getProductById(previousName);
-                    manager.updateProduct(id, name, description, type, price, stock, image);
-                    
-                    session.setAttribute("product", product);
-                    session.setAttribute("updated", "product has been updated");
-                    request.getRequestDispatcher("UpdateProductInformation.jsp").include(request, response);
-                    response.sendRedirect("UpdateProductInformation.jsp"); //Redirects user back to this page with a success message
-                }
-                else{
-                    session.setAttribute("updated", "Product was not updated"); //Successfully updated
-                    request.getRequestDispatcher("UpdateProductInformation.jsp").include(request, response);
-                    response.sendRedirect("UpdateProductInformation.jsp"); //Redirects user back to this page with an error message   
-                }
-                
-           
+        try {
+            // Call the method to update the product record
+            manager.updateProduct(id, name, description, type, price, stock, image);
             
-                
+            // Redirect the user to a success page
+            response.sendRedirect("UpdateSuccessful.jsp");
         } catch(SQLException ex){
             java.util.logging.Logger.getLogger(SearchProduct.class.getName()).log(Level.SEVERE,null,ex);
         }

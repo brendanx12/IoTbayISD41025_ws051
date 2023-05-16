@@ -49,103 +49,54 @@ tr:nth-child(even) {
                     </ul>
                 </nav>
             </div>
+            
+            <br>
+            <br>
+            <br>
             <h1>Update Product Information</h1>
             
-            <div class="container mt-3">
+            <br>
+            <div class="container">
+            <br>
+            
          
             <% if (product != null) { %>
             <form action="UpdateProducts" method="post">
-                <table width="60%">
+                <table width="50%">
                     <tr>
                         <thead>
-                            <th></th>
-                            <th>Current Product Information</th>
-                            <th>New Product Information</th>
+                            <th>Product Field Names</th>
+                            <th>Product Fields</th>
                         </thead>
                     </tr>
-                    
-                    <tr>
-                        <td>
-                            <label for name="name"><b>Product Name</b></label>
-                        </td>
-                        <td>
-                            <p><%=product.getName()%></p>
-                        </td>
-                        <td>
-                            <input type="text" id="name" name="name" required><br>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <label for name="description"><b>Product Description</b></label>
-                        </td>
-                        <td>
-                            <p><%=product.getDescription()%></p>
-                        </td>
-                        <td>
-                            <input type="text" id="description" name="description" required><br>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <label for name="type"><b>Product Type</b></label>
-                        </td>
-                        <td>
-                            <p><%=product.getType()%></p>
-                        </td>
-                        <td>
-                            <input type="text" id="type" name="type" required><br>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <label for name="price"><b>Product Price</b></label>
-                        </td>
-                        <td>
-                            <p><%=product.getPrice()%></p>
-                        </td>
-                        <td>
-                            <input type="text" id="price" name="price" required><br>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <label for name="stock"><b>Product Stock</b></label>
-                        </td>
-                        <td>
-                            <p><%=product.getStock()%></p>
-                        </td>
-                        <td>
-                            <input type="text" id="stock" name="stock" required><br>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <label for name="image"><b>Product Image Link</b></label>
-                        </td>
-                        <td>
-                            <p><%=product.getImage()%></p>
-                        </td>
-                        <td>
-                            <input type="text" id="image" name="image" required><br>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <div class="button">
-                                <input type="submit" value="Update Item">
-                            </div>
-                        </td>
-                    </tr>
-                    
-                </table>
-            </form>
+            
+            <input type="hidden" name="id" value="${product.ID}">
+            
+            <tr><td><label for="name">Name:</label></td>
+            <td><input type="text" name="name" value="${product.name}"></td>
+            <br></tr>
+            
+            <tr><td><label for="description">Description:</label></td>
+            <td><input type="text" name="description" value="${product.description}"></td>
+            <br></tr>
+            <tr><td><label for="type">Type:</label></td>
+            <td><input type="text" name="type" value="${product.type}"></td>
+            <br></tr>
+            <tr><td><label for="price">Price:</label></td>
+            <td><input type="text" name="price" value="${product.price}"></td>
+            <br></tr>
+            <tr><td><label for="stock">Stock:</label>
+            <td><input type="text" name="stock" value="${product.stock}"></td>
+            <br></tr>
+            <tr><td><label for="image">Image:</label>
+            <td><input type="text" name="image" value="${product.image}"></td>
+            <br></tr>
+         </table>
+            
+            <div class="button">
+            <input type="submit" value="Update">
+            </div>
+        </form>
                 <% } else {%>
                 <span><%=(updated != null ? updated : "")%></span>
                 <% } %>

@@ -12,9 +12,11 @@ import workshop.student;
 import java.sql.*;
 import IoTbay.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 public class DBManager {
     
-    public Statement st;
+    public static Statement st;
    
 public DBManager(Connection conn) throws SQLException {
     //according to the oracle docs, you need a connection object to create a Statement object
@@ -270,5 +272,72 @@ public void customerUpdate( String firstName,String middleName,String lastName, 
                     
 
 }       
+
+
+//Add a user-data into the database   
+public void addCard(int user_id, String card_number, String card_holder_name, String card_holder_lastname, String expiry_date,
+        int card_CVV)
+        throws SQLException{ 
+    //code for add-operation       
+
+    String query = "INSERT INTO IOTBAY.PAYMENTDETAILS (USERID, CARDNUMBER, CVV, EXPIRYDATE, FIRSTNAME, LASTNAME) VALUES (" + user_id + ", '" + card_number + "', " + card_CVV + ", '" + expiry_date + "', '" + card_holder_name + "', '" + card_holder_lastname + "')";
+
+    st.executeUpdate(query); 
+    System.out.println("Success");
+
+}
+
+//Add a user-data into the database   
+public void deleteCard(int paymentDetailsId)
+        throws SQLException{ 
+    //code for add-operation       
+
+    String query = "DELETE FROM IOTBAY.PAYMENTDETAILS WHERE PAYMENT_DETAILS_ID = " + paymentDetailsId;
+
+    st.executeUpdate(query); 
+    System.out.println("Success");
+
+}
+
+//Add a user-data into the database   
+public void updateCard(String query)
+        throws SQLException{ 
+    //code for add-operation       
+    st.executeUpdate(query); 
+    System.out.println("Success");
+
+}
+
+public static List<PaymentDetails> getPaymentDetails(int userID) throws SQLException {
+    List<PaymentDetails> paymentDetailsList = new ArrayList<>();
+    ResultSet rs = null;
+
+    try {
+        System.out.print("ANTES DE QUERY"+userID);
+
+        rs = st.executeQuery("SELECT * FROM PaymentDetails WHERE userID = " + userID);
+                System.out.print("DESPUES DE QUERY"+userID);
+
+
+        while (rs.next()) {
+            PaymentDetails paymentDetails = new PaymentDetails();
+            paymentDetails.setPaymentDetailsId(rs.getInt("PAYMENT_DETAILS_ID"));
+            paymentDetails.setUserId(rs.getInt("USERID"));
+            paymentDetails.setCardNumber(rs.getString("CARDNUMBER"));
+            paymentDetails.setFirstName(rs.getString("FIRSTNAME"));
+            paymentDetails.setExpiryDate(rs.getString("EXPIRYDATE"));
+            paymentDetailsList.add(paymentDetails);
+        }
+
+    } finally {
+        if (rs != null) {
+            rs.close();
+        }
+    }
+
+    return paymentDetailsList;
+}
+
+
 }
 

@@ -48,8 +48,15 @@ tr:nth-child(even) {
     </head>
     <body action="ShowInventoryController">
         
-        
+        <br>
+        <br>
+        <br>
+        <br>
         <h1>Inventory for IoTBay</h1>
+        <br>
+        <br>
+        <br>
+        <br>
         
         
         <table width="60%">

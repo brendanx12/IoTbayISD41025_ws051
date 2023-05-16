@@ -9,6 +9,9 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/StyleSheetForNavBar.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -29,8 +32,21 @@
             margin-top: 0;
         }
     </style>
+    
+    <div>
+            <nav>
+                <ul>
+                    <li><a href="mainPage.jsp">Home</a></li>
+                    <li><a href="customerDetails.jsp">Account Settings</a></li>
+                    <li><a href="LogOutController">Logout</a></li>
+                    
+                    
+                </ul>
+            </nav>
+    </div>
     </head>
     <body>
+        <div class="container">
         <h1>Search</h1>
         
         <form action="CustomerSearch" method="post">
@@ -68,5 +84,6 @@
      <p>No product results could be returned</p>
      <% } %>
      <br>
-     <li><a href="Index.jsp">Homepage</a></li>
+     <a href="mainPage.jsp">Homepage</a>
+     </div>
 </html>

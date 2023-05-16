@@ -24,6 +24,7 @@
            
             <li><a href="staff-login.jsp">Staff Login</a></li>
                 <li><a href="staff-register.jsp">Staff Sign Up</a></li>
+                <li><a href="CustomerProductSearch.jsp">Search</a></li>
         </ul>
     </nav>
   <div class="container">

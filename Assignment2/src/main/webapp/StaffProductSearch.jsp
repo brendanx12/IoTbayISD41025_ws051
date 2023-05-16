@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>Customer Search List</title>
+        <title>Staff Search List</title>
         <style>
         .product-grid {
             display: grid;
@@ -32,11 +32,23 @@
             margin-top: 0;
         }
     </style>
+    
+    <div>
+            <nav>
+                <ul>
+                    <li><a href="staffMainPage.jsp">Home</a></li>
+                    <li><a href="LogOutController">Logout</a></li>
+                    <li><a href="staffDetails.jsp">Account Settings</a></li>
+                    <li><a href="ManageProducts.jsp">Manage Product Inventory</a></li>
+                </ul>
+            </nav>
+    </div>
     </head>
     <body>
+        <div class="container">
         <h1>Search</h1>
         
-        <form action="CustomerSearch" method="post">
+        <form action="StaffSearch" method="post">
             <label for="searchType">Search By:</label>
             <select id="searchType" name="searchType">
                 <option value="name">Product Name</option>
@@ -71,5 +83,7 @@
      <p>No product results could be returned</p>
      <% } %>
      <br>
-     <li><a href="Index.jsp">Homepage</a></li>
+     
+     <a href="staffMainPage.jsp">Homepage</a>
+        </div>
 </html>

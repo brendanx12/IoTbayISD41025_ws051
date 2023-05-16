@@ -21,7 +21,7 @@
         <nav>
                 <ul>
                     <li><a href="index.jsp">Home</a></li>
-                  
+                    <li><a href="GuestCustomerSearch.jsp">Search</a></li>
                     <li><a href="register2.jsp">Customer Register</a></li>
                     <li><a href="staff-login.jsp">Staff Login</a></li>
                     <li><a href="staff-register.jsp">Staff Sign Up</a></li>

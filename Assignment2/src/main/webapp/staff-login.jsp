@@ -23,6 +23,7 @@
                     <li><a href="index.jsp">Home</a></li>
                     <li><a href="login.jsp">Customer Login</a></li>
                 <li><a href="register2.jsp">Customer Sign Up</a></li>
+                <li><a href="GuestCustomerSearch.jsp">Search</a></li>
                     
                     <li><a href="staff-register.jsp">Staff Register</a></li>
                 </ul>

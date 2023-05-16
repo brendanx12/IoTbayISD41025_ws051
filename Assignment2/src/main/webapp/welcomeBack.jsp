@@ -28,6 +28,7 @@
                 <ul>
                     <li><a href="mainPage.jsp">Home</a></li>
                     <li><a href="LogOutController">Logout</a></li>
+                    <li><a href="CustomerProductSearch.jsp">Search</a></li>
                     <li><a href="customerDetails.jsp">Account Settings</a></li>
                 </ul>
             </nav>
