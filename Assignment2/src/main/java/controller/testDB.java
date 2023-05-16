@@ -43,8 +43,8 @@ try {
     //System.out.print("Password is  " + newCustomer.getPassword());
     //System.out.print("He lives in the state  ");
     //db2.removeProductById(3);
-    int id = db2.getProductById("name");
-    db2.updateProduct(id, "Nadnerb", "Des", "type", 43, 5, "Image");
+    //int id = db.getProductById("name");
+    
     //db2.removeProductByName("Nadnerb");
     //db2.getProductById("Nadnerb");
     //System.out.println(db2.getProductById("Nadnerb"));

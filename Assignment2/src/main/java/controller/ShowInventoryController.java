@@ -33,7 +33,6 @@ public class ShowInventoryController extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //doPost(request, response);
         
         //catch exceptions for DBConnector
         try{
@@ -48,7 +47,7 @@ public class ShowInventoryController extends HttpServlet {
             manager = new DBProduct((Connector.openConnection()));
         }
         catch (SQLException ex){
-            java.util.logging.Logger.getLogger(AddProduct.class.getName()).log(Level.SEVERE,null,ex);
+            java.util.logging.Logger.getLogger(ShowInventoryController.class.getName()).log(Level.SEVERE,null,ex);
         }
         
         //session

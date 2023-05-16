@@ -26,6 +26,10 @@
                 <li><a href="staff-login.jsp">Staff Login</a></li>
                 <li><a href="staff-register.jsp">Staff Sign Up</a></li>
                 <li><a href="GuestCustomerSearch.jsp">Search</a></li>
+                <li><a href="orderHomePage.jsp">Order Home Page</a></li>
+                <li><a href="cart.jsp">Cart</a></li>
+                <li><a href="SystemAdmin.jsp">System Admin</a></li> 
+                
             </ul>
         </nav>
         <br>

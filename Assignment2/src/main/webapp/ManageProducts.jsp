@@ -39,7 +39,7 @@
         
         <a href="ShowInventoryController" method="post">Show Product Inventory<br></a>
         
-        <a href="ProductSearchPage.jsp" method="post">Search Products<br></a>
+        <a href="ProductSearchPage.jsp" method="post">Update Or Remove Products<br></a>
         </div>
     </body>
 </html>

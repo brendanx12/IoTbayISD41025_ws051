@@ -25,6 +25,8 @@
                     <li><a href="register2.jsp">Customer Register</a></li>
                     <li><a href="staff-login.jsp">Staff Login</a></li>
                     <li><a href="staff-register.jsp">Staff Sign Up</a></li>
+                    <li><a href="orderHomePage.jsp">Order Home Page</a></li>
+                    <li><a href="cart.jsp">Cart</a></li>
                 </ul>
         </nav>
         </div>

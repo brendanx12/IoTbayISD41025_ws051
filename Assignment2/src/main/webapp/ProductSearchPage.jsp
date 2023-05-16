@@ -37,6 +37,7 @@ tr:nth-child(even) {
                     <li><a href="LogOutController">Logout</a></li>
                     <li><a href="staffDetails.jsp">Account Settings</a></li>
                     <li><a href="ManageProducts.jsp">Manage Product Inventory</a></li>
+                    <li><a href="StaffProductSearch.jsp">Search</a></li>
                 </ul>
             </nav>
         </div>

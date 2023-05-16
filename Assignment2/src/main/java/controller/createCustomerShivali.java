@@ -24,10 +24,10 @@ import IoTbay.*;
  *
  * @author Mushini
  */
-@WebServlet(name = "createCustomer", urlPatterns = {"/createCustomer"})
+@WebServlet(name = "createCustomerShivali", urlPatterns = {"/createCustomerShivali"})
 public class createCustomerShivali extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)  
+    public void doPost(HttpServletRequest request, HttpServletResponse response)  
         throws ServletException, IOException {  
   
     response.setContentType("text/html");  
@@ -43,7 +43,6 @@ public class createCustomerShivali extends HttpServlet {
     //this function is very important as we use it to loginand stuff 
     //please un comment it
     
-    try {
         String firstName = request.getParameter("firstName");
         String middleName= request.getParameter("middleName");
         String lastName = request.getParameter("lastName");
@@ -54,16 +53,17 @@ public class createCustomerShivali extends HttpServlet {
         String city = request.getParameter("city");
         int postcode = Integer.parseInt(request.getParameter("postcode"));
         String password = request.getParameter("password");
-        manager.createCustomer(firstName, middleName, lastName, email, mobileNumber, address, state, city, postcode, password);
-        request.getRequestDispatcher("createCustomer.jsp").include(request,response);
-  
-} catch (SQLException | NullPointerException ex) {
-    System.out.println("Vague Exception Occured!");
-}
-          
-          
     
-                      
-        }  
+        try {
+
+            manager.createCustomer(firstName, middleName, lastName, email, mobileNumber, address, state, city, postcode, password);
+            
+            request.getRequestDispatcher("createCustomer.jsp").include(request,response);
+            
+            
+        } catch (SQLException | NullPointerException ex) {
+            System.out.println("Vague Exception Occured!");
+        }
+    }  
 }  
 

@@ -338,6 +338,36 @@ public static List<PaymentDetails> getPaymentDetails(int userID) throws SQLExcep
     return paymentDetailsList;
 }
 
+public void deleteCustomerAccount(String email) throws SQLException{
+   //code for delete-operation 
+   String DeleteQuery = "DELETE FROM IOTBAY.STAFF WHERE STAFFEMAIL = '" + email + "'";
+   st.executeUpdate(DeleteQuery);
+}
+
+//Gets all customer objects from the database and adds them to the list.
+public ArrayList<Customer> getAllCustomerData()throws SQLException{
+        ArrayList<Customer> searchResults = new ArrayList<>();
+        String query = "SELECT * FROM IOTBAY.CUSTOMER";
+        ResultSet rs = st.executeQuery(query);
+
+        while(rs.next()){
+             String firstName = rs.getString(2);
+             String middleName = rs.getString(3);
+             String lastName = rs.getString(4);
+             String email = rs.getString(6);
+             int mobileNumber = rs.getInt(5);
+             String address = rs.getString(8);
+             String state = rs.getString(10);
+             String city = rs.getString(9);
+             int postcode = rs.getInt(11);
+             String password = rs.getString(7);
+
+             Customer customer = new Customer(firstName, middleName, lastName, email, mobileNumber, address, state, city, postcode, password);
+             searchResults.add(customer);
+        }
+
+        return searchResults;
+    }
 
 }
 
