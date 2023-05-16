@@ -26,6 +26,7 @@
                 <ul>
                     <li><a href="mainPage.jsp">Home</a></li>
                     <li><a href="LogOutController">Logout</a></li>
+                    <li><a href="pay.jsp">Payment Settings</a></li>
                 </ul>
             </nav>
         </div>

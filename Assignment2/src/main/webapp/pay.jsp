@@ -25,6 +25,7 @@ Author : benja
     <title>Payment Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/StyleSheetForNavBar.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,14 +43,8 @@ Author : benja
 
     <nav>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <%-- Only show login/register links if the user is not logged in --%>
-            <% if (loggedInCustomer == null) { %>
-                <li><a href="login.jsp">Login</a></li>
-                <li><a href="register2.jsp">Register</a></li>
-            <% } else { %>
-                <li><a href="logout.jsp">Logout</a></li>
-            <% } %>
+            <li><a href="mainPage.jsp">Home</a></li>
+            <li><a href="LogOutController">Logout</a></li>
         </ul>
     </nav>
     <br>
