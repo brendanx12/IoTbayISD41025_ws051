@@ -1,0 +1,11 @@
+searchProductsByName
+searchProductsByType
+removeProductById
+getProductByName
+getProduct
+updateProduct
+checkProduct
+	addProduct
+
+getProductById
+getAllProducts

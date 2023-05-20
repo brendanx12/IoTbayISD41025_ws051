@@ -26,42 +26,8 @@ public class DBProduct{
     
     public DBProduct(Connection conn)throws SQLException{       
         st = conn.createStatement();   
-    }
-
-   
-    //Update the product information in the database
-    
-    //Remove the product from the database
-    
-    //Increase stock quantity for product
-    
-    //Decrease stock quantity for product
-    
-    //Find user product in the database by name   
-    public Product findProduct(String name) throws SQLException {  
-    query = "SELECT * FROM IOTBAY.PRODUCT WHERE PRODUCTNAME= '"+name+"'";
-    ResultSet rs = st.executeQuery(query);
-    while(rs.next()){
-        String newName = rs.getString(2);
-        if (newName.equals(name)){
-                int id = rs.getInt(1);
-                //name = rs.getString(2);
-                String description = rs.getString(3);
-                String type = rs.getString(4);
-                double price = rs.getDouble(5);
-                int stock = rs.getInt(6);
-                String image = rs.getString(7);
-                if(name.equals(rs.getString(2))){
-                    return new Product(id,name,description, type, price,
-            stock, image);
-                }else{
-                    System.err.println("Product already exists");
-                    return null;
-                }
-        }   
     }    
-   return null;   
-}
+
     //This method will allow you to add a product record to the database
     public void addProduct(int id, String name, String description, String type, double price, int stock, String image) throws SQLException {
         query = "INSERT INTO IOTBAY.PRODUCT(PRODUCTID, PRODUCTNAME, PRODUCTDESCRIPTION, PRODUCTTYPE, PRODUCTPRICE, PRODUCTSTOCK, PRODUCTIMAGE)" + 

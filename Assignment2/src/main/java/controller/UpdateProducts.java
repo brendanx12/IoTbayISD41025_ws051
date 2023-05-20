@@ -60,7 +60,6 @@ public class UpdateProducts extends HttpServlet {
         
         Product product = (Product) session.getAttribute("Product");
         //Retrieve the inputted values from the user
-        //String previousName = request.getParameter("previousName");
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String description = request.getParameter("description"); 

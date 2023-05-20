@@ -44,6 +44,11 @@ Author : benja
     <nav>
         <ul>
             <li><a href="mainPage.jsp">Home</a></li>
+            <li><a href="CustomerProductSearch.jsp">Search</a></li>
+            <li><a href="pay.jsp">Payment Settings</a></li>
+            <li><a href="LogOutController">Logout</a></li>
+            <li><a href="orderHomePage.jsp">Order Home Page</a></li>
+            <li><a href="cart.jsp">Cart</a></li>
             <li><a href="LogOutController">Logout</a></li>
         </ul>
     </nav>
